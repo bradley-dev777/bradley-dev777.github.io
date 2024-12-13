@@ -1,0 +1,28 @@
+# User Input Display
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Display</title>
+</head>
+<body>
+    <h1>Input Display Form</h1>
+    <form id="inputForm">
+        <label for="userInput">Type something:</label>
+        <input type="text" id="userInput" required>
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Your Input:</h2>
+    <p id="displayText"></p>
+
+    <script>
+        document.getElementById('inputForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const input = document.getElementById('userInput').value;
+            document.getElementById('displayText').innerText = input;
+        });
+    </script>
+</body>
+</html>
